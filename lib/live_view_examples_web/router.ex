@@ -1,5 +1,6 @@
 defmodule LiveViewExamplesWeb.Router do
   use LiveViewExamplesWeb, :router
+  import Phoenix.LiveView.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -18,6 +19,7 @@ defmodule LiveViewExamplesWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/timer", Timer
   end
 
   # Other scopes may use custom stacks.
