@@ -20,6 +20,7 @@ defmodule LiveViewExamplesWeb.Router do
 
     get "/", PageController, :index
     live "/timer", Timer
+    live "/counter", Counter
   end
 
   # Other scopes may use custom stacks.
